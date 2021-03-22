@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="person" class="io.Malhi.PracticeSpring.Person">
+        <property name="firstName" value="Lovepreet"></property>
+              <property name="lastName" value="Malhi"></property>
+        <property name="age" value="24"></property>
+        <property name="hobies">
+                <list>
+                        <value>Football</value>
+                        <value>Video Games</value>
+                </list>
+        </property>
+        <property name="address">
+            <map><entry key="Home" value-ref="address"></entry></map>
+        </property>
+
+    </bean>
+    <bean name="address" class="io.Malhi.PracticeSpring.Address">
+        <property name="city" value="Northyork"></property>
+        <property name="province" value="Ontario"></property>
+    </bean>
+</beans>
